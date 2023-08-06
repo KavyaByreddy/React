@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faLock, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
-class LoginForm3 extends Component {
+class LoginForm3 extends React.Component {
   constructor(props) {
     super(props);
 
@@ -48,11 +48,7 @@ class LoginForm3 extends Component {
             Password:
           </label>
           <div className="password-input-container">
-            <input
-              type={showPassword ? 'text' : 'password'}
-              id="password"
-              ref={this.passwordRef}
-            />
+            <input type={showPassword ? 'text' : 'password'} id="password" ref={this.passwordRef} />
             <span onClick={this.handlePasswordVisibility}>
               <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
             </span>
