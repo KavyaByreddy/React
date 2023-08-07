@@ -1,5 +1,5 @@
 import React from "react";
-import Employee from "../Employee";
+import Employee from "./empData";
 
 class Listrendering extends React.Component{
 render(){
