@@ -1,10 +1,9 @@
-import Users from "./Map( )/User1(CDM)"
-
+import Registration from "./FormHandling/Registration2"
 
 function App(){
     return(
         <>
-        <Users/>
+        <Registration/>
         </>
     )
    
