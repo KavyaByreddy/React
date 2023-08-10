@@ -1,9 +1,9 @@
-import Listrendering from "./Listrendering/1/Listrendering"
+import User from "./Map( )/User"
 
 function App(){
     return(
         <>
-        <Listrendering/>
+        <User/>
         </>
     )
    

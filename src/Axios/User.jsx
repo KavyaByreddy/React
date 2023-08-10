@@ -4,7 +4,7 @@ import Axios from 'axios'
   state = {
     users:[]
   }
-  getUserDataHanlder =()=>{
+  getUserDataHandler =()=>{
     //invoking api
     Axios.get('https://jsonplaceholder.typicode.com/users')
     .then((response)=>{
@@ -18,7 +18,7 @@ import Axios from 'axios'
     return (
       <div>
         <h1>User Component</h1>
-        <button onClick={this.getUserDataHanlder}>Click</button>
+        <button onClick={this.getUserDataHandler}>Click</button>
         <pre>{JSON.stringify(this.state)}</pre>
       </div>
     )
