@@ -1,9 +1,10 @@
-import Product2 from "./Axios/Product2"
+import Users from "./Map( )/User1(CDM)"
+
 
 function App(){
     return(
         <>
-        <Product2/>
+        <Users/>
         </>
     )
    
