@@ -1,9 +1,9 @@
-import User from "./Map( )/User"
+import Product from "./Axios/Product"
 
 function App(){
     return(
         <>
-        <User/>
+        <Product/>
         </>
     )
    
