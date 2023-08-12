@@ -4,6 +4,12 @@ import UserDetails from './UserDetails'
 import Axios from 'axios'
 const UserApp = () => {
    let [userData, setUserData]=useState({}) 
+   let [user, setUser]  = useState({})
+
+   let selectedUser=(user)=>{
+    console.log(user)
+    setUser(user)
+   }
   useEffect(()=>{
     Axios.get('https://dummyjson.com/users')
     .then((response)=>{
@@ -14,20 +20,24 @@ const UserApp = () => {
   },[])
   return (
     <div>
-        <div className="container">
-            <h2>User App</h2>
-            <pre>{JSON.stringify(userData)}</pre>
+        <div className="container mt-5">
+       {/*      <h2>User App</h2> */}
+          {/*   <pre>{JSON.stringify(userData)}</pre>
+            <pre>{JSON.stringify(user)}</pre> */}
             <div className="row">
                 <div className="col-md-8">
                     {
                        Object.keys(userData).length >0 ? <>
-                            <UserList users={userData.users}/>
+                            <UserList getUser={selectedUser} users={userData.users}/>
                        </> :null
                     }
                
                 </div>
                 <div className="col-md-4">
-                    <UserDetails/>
+                    {
+                        Object.keys(user).length>0 ? <> <UserDetails   user={user} /></>:<h1>User Details</h1>
+                    }
+                   
                 </div>
             </div>
         </div>
