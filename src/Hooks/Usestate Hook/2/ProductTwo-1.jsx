@@ -1,16 +1,17 @@
 import React from 'react'
-
+//WITHOUT SPREAD OPERATOR
 function ProductTwo() {
   let [product,setProduct]=React.useState({
         name: "Iphone 13",
         price: 45000,
         image: "Image Missing",
-        qty: 1})
+        qty: 1
+    })
 let incrHandler = ()=>{
-  setProduct({ ...product,  qty:product.qty +1})
+  setProduct({qty:product.qty +1})
 }
 let decrHandler = ()=>{
-  setProduct({...product, qty:product.qty -1})
+  setProduct({qty:product.qty -1})
 }
 return (
             <>

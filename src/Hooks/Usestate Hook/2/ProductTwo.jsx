@@ -5,7 +5,8 @@ function ProductTwo() {
         name: "Iphone 13",
         price: 45000,
         image: "Image Missing",
-        qty: 1})
+        qty: 1
+    })
 let incrHandler = ()=>{
   setProduct({ ...product,  qty:product.qty +1})
 }
